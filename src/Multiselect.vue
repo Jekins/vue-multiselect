@@ -36,7 +36,7 @@
         </transition>
         <input
           ref="search"
-          v-if="isOpen && searchable"
+          v-if="searchable"
           :name="name"
           :id="id"
           type="text"
@@ -326,11 +326,11 @@ export default {
     },
     inputStyle () {
       if (
-        // this.searchable ||
+        this.searchable ||
         (this.multiple && this.value && this.value.length)
       ) {
         // Hide input by setting the width to 0 allowing it to receive focus
-        return this.isOpen
+        return this.isOpen && this.searchable
           ? { width: 'auto' }
           : { width: '0', position: 'absolute', padding: '0' }
       }
