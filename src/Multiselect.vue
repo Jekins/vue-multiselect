@@ -326,7 +326,7 @@ export default {
     },
     inputStyle () {
       if (
-        this.searchable ||
+        // this.searchable ||
         (this.multiple && this.value && this.value.length)
       ) {
         // Hide input by setting the width to 0 allowing it to receive focus
