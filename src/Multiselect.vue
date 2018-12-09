@@ -329,9 +329,8 @@ export default {
         this.searchable ||
         (this.multiple && this.value && this.value.length)
       ) {
-        console.log(this.isOpen && this.searchable)
         // Hide input by setting the width to 0 allowing it to receive focus
-        return this.isOpen && this.searchable
+        return this.isOpen
           ? { width: 'auto' }
           : { width: '0', position: 'absolute', padding: '0' }
       }
