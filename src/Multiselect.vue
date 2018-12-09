@@ -36,7 +36,7 @@
         </transition>
         <input
           ref="search"
-          v-if="searchable"
+          v-if="isOpen && searchable"
           :name="name"
           :id="id"
           type="text"
