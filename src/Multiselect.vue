@@ -325,10 +325,12 @@ export default {
       return this.showLabels ? this.selectedLabel : ''
     },
     inputStyle () {
+      console.log(1, this.isOpen && this.searchable)
       if (
         this.searchable ||
         (this.multiple && this.value && this.value.length)
       ) {
+        console.log(2, this.isOpen && this.searchable)
         // Hide input by setting the width to 0 allowing it to receive focus
         return this.isOpen && this.searchable
           ? { width: 'auto' }
